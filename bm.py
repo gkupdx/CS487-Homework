@@ -77,7 +77,7 @@ class bufferManager:
 					return self.buffer[j].currentPage
 			return self.dm.readPageFromDisk(pageNumber)
 
-		pass
+		#pass
     
 	#------------------------------------------------------------
 	def unpin(self, pageNumber, dirty):
@@ -87,7 +87,7 @@ class bufferManager:
 				if dirty is True and self.buffer[i].pinCount == 0: #completely remove from buffer pool and write to disk
 					self.dm.writePageToDisk(self.buffer[i].currentPage)
 
-		pass
+		#pass
 
 	def flushPage(self,pageNumber): 
 		# Ignore this function, it is not needed for this homework.
